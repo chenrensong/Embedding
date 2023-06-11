@@ -1,12 +1,10 @@
-# README.md
-
-## Embedding
+# Embedding
 
 This application, based on InstructorEmbedding and FastAPI, simulates the input and output of OpenAI's embeddings interface. It implements the ability to handle text-to-vector conversion locally.
 
 ---
 
-## Getting Started
+# Getting Started
 
 First, make sure you have installed Python 3.7 or a later version. You can set up and run the project following these steps:
 
@@ -38,13 +36,13 @@ First, make sure you have installed Python 3.7 or a later version. You can set u
 
 ---
 
-## API Interface
+# API Interface
 
-### GET `/`
+## GET `/`
 
 Returns a welcome message.
 
-### POST `/embeddings`
+## POST `/embeddings`
 
 Accepts a JSON object of `EmbeddingRequest` and returns an `EmbeddingResponse` object, which includes the embeddings of the requested text.
 
@@ -66,23 +64,23 @@ Console.WriteLine(result);
 
 ---
 
-## Contribution
+# Contribution
 
 Feel free to submit an Issue or Pull Request to improve the project. Please ensure that your code follows the PEP8 coding style and that tests have been performed before submitting the Pull Request.
 
 ---
 
-## License
+# License
 
 This project is licensed under the MIT License.
 ---
 
-## Contact
+# Contact
 
 If you have any questions or suggestions, feel free to contact me at chenrensong@outlook.com.
 
 ---
 
-## Acknowledgements
+# Acknowledgements
 
 Thanks to OpenAI for the inspiration that made this project possible.
