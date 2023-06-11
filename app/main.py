@@ -2,6 +2,7 @@
 
 from fastapi import FastAPI, HTTPException
 from InstructorEmbedding import INSTRUCTOR
+import tiktoken
 from typing import List
 from pydantic import BaseModel
 import logging
@@ -34,6 +35,7 @@ class EmbeddingResponse(BaseModel):
 
 # FastAPI Application
 app = FastAPI()
+encoding = tiktoken.get_encoding("gpt2")
 logging.basicConfig(level=logging.INFO)
 
 @app.on_event("startup")
@@ -62,7 +64,8 @@ async def generate_embeddings(payload: EmbeddingRequest):
     model = app.state.models[payload.model]
     embeddings = model.encode([payload.input, payload.instruction])
 
-    prompt_tokens = len(payload.input.split())
+    tokens = encoding.encode(payload.input)
+    prompt_tokens = len(tokens)
     response_tokens = len(embeddings[0])
     total_tokens = prompt_tokens + response_tokens
 

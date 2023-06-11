@@ -31,7 +31,7 @@ First, make sure you have installed Python 3.7 or a later version. You can set u
 4. Run the application:
 
     ```
-    docker run -t -p 8000:80 embedding .
+    docker run -t -p 8000:80 embedding 
     ```
 
     Now, your application should be running and can be checked by visiting `http://localhost:8000`.
@@ -48,11 +48,45 @@ Returns a welcome message.
 
 Accepts a JSON object of `EmbeddingRequest` and returns an `EmbeddingResponse` object, which includes the embeddings of the requested text.
 
-Request example:
+Example requests:
+
+```crul
+curl http://127.0.0.1:8000/embeddings \
+  -H "Content-Type: application/json" \
+  -d '{
+    "input": "Your text string goes here",
+    "model": "text2vec-base-chinese"
+  }'
+```
+
+Example response:
+```json
+{
+  "data": [
+    {
+      "embedding": [
+        -0.006929283495992422,
+        -0.005336422007530928,
+        -4.547132266452536e-05,
+        -0.024047505110502243
+      ],
+      "index": 0,
+      "object": "embedding"
+    }
+  ],
+  "model": "text2vec-base-chinese",
+  "object": "list",
+  "usage": {
+    "prompt_tokens": 5,
+    "total_tokens": 5
+  }
+}
+```
+
+CSharp Request example:
 
 ```CSharp
 HttpClient client = new HttpClient();
-
 var request = new {
     input = "Hello, I'm Chen Rensong",
     instruction = "Represent the query for retrieval"

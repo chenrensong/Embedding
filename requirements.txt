@@ -6,3 +6,4 @@ sentence-transformers==2.2.2
 torch==2.0.1
 tqdm==4.65.0
 uvicorn==0.22.0
+tiktoken>=0.0.1
