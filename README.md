@@ -107,6 +107,7 @@ Feel free to submit an Issue or Pull Request to improve the project. Please ensu
 # License
 
 This project is licensed under the MIT License.
+
 ---
 
 # Contact
