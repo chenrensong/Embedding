@@ -98,6 +98,63 @@ Console.WriteLine(result);
 
 ---
 
+# Model Download
+
+
+## First Install Git LFS
+
+### Windows
+
+1. First, download the latest Git LFS Windows installer from the Git LFS GitHub repository page. The URL for the page is: https://github.com/git-lfs/git-lfs/releases/latest.
+
+2. After downloading the `.exe` file, double-click on it to launch the installer.
+
+3. The installer will guide you through the installation of Git LFS. The default settings should be fine, just click "Next" until the installation is complete.
+
+4. After the installation, open a command prompt (either cmd or PowerShell) and type in the following command to make Git LFS available across all your repositories:
+
+    ```
+    git lfs install
+    ```
+
+By now, Git LFS should be successfully installed on your Windows machine.
+
+### Mac
+
+On a Mac, we'll use Homebrew to install Git LFS. If you haven't installed Homebrew yet, you can get the installation guide from its official website: https://brew.sh/
+
+1. Open a terminal window.
+
+2. If you have already installed Homebrew, just run the following command to install Git LFS:
+
+    ```
+    brew install git-lfs
+    ```
+
+3. After the installation, run the following command to make Git LFS available across all your repositories:
+
+    ```
+    git lfs install
+    ```
+
+By now, Git LFS should be successfully installed on your Mac machine.
+
+And that's the steps for installing Git LFS on Windows and Mac. I hope this helps! If you encounter any issues during the installation, feel free to ask me.
+
+
+## Second Clone Model
+
+
+```Shell
+cd Model
+```
+
+```Shell
+git clone https://huggingface.co/shibing624/text2vec-base-chinese/tree/main
+```
+
+---
+
 # Contribution
 
 Feel free to submit an Issue or Pull Request to improve the project. Please ensure that your code follows the PEP8 coding style and that tests have been performed before submitting the Pull Request.
