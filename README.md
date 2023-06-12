@@ -14,19 +14,30 @@ First, make sure you have installed Python 3.7 or a later version. You can set u
     git clone https://github.com/chenrensong/embedding.git
     ```
 
-2. Navigate into the project folder:
+2. Navigate into the model folder:
+
+    ```
+    cd embedding/model
+    ```
+    
+3. Download Model:
+
+    ```
+     git clone https://huggingface.co/shibing624/text2vec-base-chinese
+    ```
+3. Navigate into the project folder:
 
     ```
     cd embedding
-    ```
-
-3. Build the docker image:
+    ```   
+    
+5. Build the docker image:
 
     ```
     docker build -t embedding .
     ```
 
-4. Run the application:
+6. Run the application:
 
     ```
     docker run -t -p 8000:80 embedding 
@@ -98,12 +109,10 @@ Console.WriteLine(result);
 
 ---
 
-# Model Download
+# Install Git LFS
 
 
-## First Install Git LFS
-
-### Windows
+## Windows
 
 1. First, download the latest Git LFS Windows installer from the Git LFS GitHub repository page. The URL for the page is: https://github.com/git-lfs/git-lfs/releases/latest.
 
@@ -119,7 +128,7 @@ Console.WriteLine(result);
 
 By now, Git LFS should be successfully installed on your Windows machine.
 
-### Mac
+## Mac
 
 On a Mac, we'll use Homebrew to install Git LFS. If you haven't installed Homebrew yet, you can get the installation guide from its official website: https://brew.sh/
 
@@ -140,18 +149,6 @@ On a Mac, we'll use Homebrew to install Git LFS. If you haven't installed Homebr
 By now, Git LFS should be successfully installed on your Mac machine.
 
 And that's the steps for installing Git LFS on Windows and Mac. I hope this helps! If you encounter any issues during the installation, feel free to ask me.
-
-
-## Second Clone Model
-
-
-```Shell
-cd Model
-```
-
-```Shell
-git clone https://huggingface.co/shibing624/text2vec-base-chinese/tree/main
-```
 
 ---
 
